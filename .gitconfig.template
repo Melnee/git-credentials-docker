@@ -1,0 +1,5 @@
+[credential]
+    helper = store
+[user]
+    name = ${GIT_FULL_NAME}
+    email = ${GIT_EMAIL}

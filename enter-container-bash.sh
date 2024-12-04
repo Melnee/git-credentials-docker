@@ -1,0 +1,1 @@
+sudo docker exec -it melnee-git-creds-container /bin/bash

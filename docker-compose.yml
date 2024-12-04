@@ -1,0 +1,19 @@
+services:
+  git_bash:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GIT_FULL_NAME: "${GIT_FULL_NAME}"
+        GIT_EMAIL: "${GIT_EMAIL}"
+        GIT_USERNAME: "${GIT_USERNAME}"
+        GIT_PASSWORD: "${GIT_PASSWORD}"
+        SSH_PRIVATE_KEY: "${SSH_PRIVATE_KEY}"
+    image: melnee-git-creds
+    container_name: melnee-git-creds-container
+    env_file:
+    - .env
+    stdin_open: true
+    tty: true
+    volumes:
+      - "/:/host" 
